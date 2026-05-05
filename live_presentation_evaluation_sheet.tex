@@ -1,0 +1,114 @@
+\documentclass[10pt]{article}
+\usepackage[landscape,margin=0.45in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[table]{xcolor}
+\usepackage{array,tabularx,booktabs,multirow}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{BDATA 200}
+\rhead{Live Presentation Evaluation Sheet}
+\cfoot{\thepage/\pageref{LastPage}}
+
+\definecolor{uwpurple}{HTML}{4B2E83}
+\definecolor{uwgold}{HTML}{B7A57A}
+\definecolor{lightbg}{HTML}{F7F5F1}
+
+\setlength{\headheight}{14pt}
+\renewcommand{\arraystretch}{1.2}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}m{#1}}
+
+% Empty outlined stars with more spacing so they do not overlap
+\newcommand{\ratingstars}{%
+\begin{tikzpicture}[baseline=-0.6ex, x=1cm, y=1cm]
+  \foreach \x in {0,0.95,1.90,2.85,3.80}{
+    \node[
+      star,
+      star points=5,
+      star point ratio=2.25,
+      draw=uwgold,
+      line width=0.6pt,
+      fill=white,
+      minimum size=0.42cm,
+      inner sep=0pt
+    ] at (\x,0) {};
+  }
+\end{tikzpicture}%
+}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+    {\Large\bfseries\color{uwpurple} BDATA 200 Live Presentation Evaluation Sheet}\\[2pt]
+    {\normalsize\color{uwgold} Project 1: Kaggle Competition Dataset}
+\end{center}
+
+\noindent
+\colorbox{lightbg}{%
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+\small
+\textbf{Project Title:} \rule{0.32\linewidth}{0.4pt}\hfill
+\textbf{Group Name:} \rule{0.20\linewidth}{0.4pt}\hfill
+\textbf{Date:} \rule{0.12\linewidth}{0.4pt}\\[0.5em]
+\textbf{Student(s):} \rule{0.78\linewidth}{0.4pt}
+}}
+
+\vspace{0.4em}
+\noindent\small\textit{Directions:} Mark the stars during the presentation. This rubric focuses on the \textbf{live presentation} criteria from the project guidelines: project background, question, methods, results, storytelling, discussion, and delivery.
+
+\vspace{0.45em}
+\rowcolors{2}{white}{lightbg}
+\small
+\begin{tabularx}{\linewidth}{|>{\RaggedRight\arraybackslash}m{0.23\linewidth}|C{0.07\linewidth}|C{0.19\linewidth}|Y|}
+\hline
+\rowcolor{uwpurple}
+\color{white}\textbf{Criterion} & \color{white}\textbf{Weight} & \color{white}\textbf{Rating} & \color{white}\textbf{What to Look For} \\
+\hline
+Project Background \& Motivation & 10\% & \ratingstars & Explains the context of the project and why the audience should care. \\
+\hline
+Research Question / Objective & 15\% & \ratingstars & The question is clear, specific, interesting, and worth investigating. \\
+\hline
+Methods \& Data & 15\% & \ratingstars & Describes the dataset, cleaning, and analytical approach clearly. \\
+\hline
+Results \& Visualization & 20\% & \ratingstars & Presents key findings effectively and includes at least one strong visualization. \\
+\hline
+Insights \& Surprise & 15\% & \ratingstars & Uses evidence to challenge assumptions or reveal something unexpected. \\
+\hline
+Storytelling \& Narrative Arc & 15\% & \ratingstars & Follows a compelling structure: setup $\rightarrow$ data reveal $\rightarrow$ insight. \\
+\hline
+Discussion \& Broader Context & 5\% & \ratingstars & Interprets findings in a larger societal, cultural, historical, political, or ethical context. \\
+\hline
+Delivery \& Q\&A & 5\% & \ratingstars & Professional delivery, clear communication, and thoughtful Q\&A participation. \\
+\hline
+\rowcolor{uwgold!18}
+\textbf{Total} & \textbf{100\%} & & \\
+\hline
+\end{tabularx}
+
+\vspace{0.45em}
+\noindent\begin{minipage}[t]{0.64\linewidth}
+\textbf{Instructor Notes:}\\[0.25em]
+\fbox{\parbox[c][1.45in][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\vspace{0.15em}}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.33\linewidth}
+\small
+\textbf{Quick scoring guide}\\[0.2em]
+1 star = weak\\
+2 stars = developing\\
+3 stars = satisfactory\\
+4 stars = strong\\
+5 stars = excellent
+\end{minipage}
+
+\end{document}
